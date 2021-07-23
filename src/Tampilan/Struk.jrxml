@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Struk" language="groovy" pageWidth="550" pageHeight="500" columnWidth="510" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ef721d49-ed80-4826-a3f5-4d817123e0f8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="NoPembelian" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * from allbuy where NoPembelian = $P{NoPembelian}]]>
+	</queryString>
+	<field name="Tanggal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NoPembelian" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IDTiket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaEvent" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaLengkap" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NoTelp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jenis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jumlah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MetodeBayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Administrasi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="170" splitType="Stretch">
+			<image>
+				<reportElement x="148" y="-41" width="276" height="195" uuid="1d26ec2d-e683-4be8-b587-7043296b7248"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\OneDrive\\Documents\\NetBeansProjects\\Tubes PBO1\\src\\Asset\\logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="343" y="138" width="57" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="488ddf22-eb5a-4a6e-9779-65d67b4ae1b8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="138" width="75" height="20" backcolor="#FFFFFF" uuid="4e568dc1-7bd6-4970-8b38-1ba1b35a8765"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="81" splitType="Stretch">
+			<rectangle>
+				<reportElement x="35" y="0" width="440" height="21" backcolor="#0A4C86" uuid="f5f11ee2-e5f9-41f4-a31b-01e6d565f3ed"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="35" y="1" width="130" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="3f8aed79-c9e5-4972-a998-219d07e719d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO PEMBELIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="188" y="1" width="141" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="42dbb780-e02d-4503-bfe1-701816f78d91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="115" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="88e450bc-8b19-4283-adc8-17e0d4dd066b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID EVENT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="35" y="36" width="115" height="20" uuid="4aa83394-e1d1-41e4-828b-93fe18ef067e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NoPembelian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="36" width="115" height="20" uuid="71f48cfe-33b0-438f-9ca1-566ff2413a0b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NamaLengkap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="36" width="115" height="20" uuid="fbbc5cb5-bd15-45b4-b8bb-51e8a59084ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IDTiket}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<rectangle>
+				<reportElement x="35" y="0" width="440" height="21" backcolor="#0A4C86" uuid="dbb46eaa-40c9-4485-bf47-a2324547d281"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="35" y="1" width="130" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="3ca2a06c-3f0c-4e7a-8b5b-36a74e9baef2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESKRIPSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="0" width="62" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="1868b589-4292-4196-a598-24e30afa1086"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="1" width="63" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="cff0f843-2662-48d9-9bc3-4dd1c66a4fdb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="388" y="1" width="62" height="20" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="4e779a1c-027a-4ee4-a406-c90ec43c65a9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="89" splitType="Stretch">
+			<textField>
+				<reportElement x="48" y="0" width="117" height="20" uuid="22bd28ce-4ea6-4634-9c12-4c9d33258e35"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NamaEvent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="62" height="20" uuid="43803733-1d5e-4787-b11e-922183507521"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="0" width="63" height="20" uuid="f90a376b-7172-4271-9fd5-f55b73399084"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rp "+$F{Harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="0" width="92" height="20" uuid="513eadf8-f3d6-4a1b-bcd6-445eab8c698b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rp "+$F{Harga}*$F{Jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="48" y="36" width="100" height="20" uuid="21889e0a-f752-4072-b892-559b7269a816"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MetodeBayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="36" width="63" height="20" uuid="269e42b4-36ed-4364-978c-acf1e1355e1f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rp "+$F{Administrasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="36" width="92" height="20" uuid="006c877f-f09c-43e0-b3c4-af98572cbe92"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rp "+$F{Administrasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="36" width="62" height="20" uuid="b6fa1c4f-be6c-416c-aed6-aa987990de80"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monospaced" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="48" y="56" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="40da55f6-3e6d-4362-900e-594848228f08"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(biaya admin)]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="48" y="4" width="417" height="1" forecolor="#0A4C86" uuid="1f458949-d2ab-4d91-a908-c2db0f3075eb"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="284" y="20" width="63" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="ba31bb2a-0157-4545-843e-90e8b8011b02"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="375" y="20" width="90" height="20" uuid="289f3567-7fb6-408d-8378-a15dbb6aadfd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Monospaced" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Rp "+$F{Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
