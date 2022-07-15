@@ -1,4 +1,4 @@
-# Sistem-Pembelian-Tiket-Konser-Online
+# Sistem Pembelian Tiket Konser Online
 Sistem Pembelian Tiket Konser Online ditujukan untuk memenuhi tugas besar matakuliah Pemrograman Berorietasi Object. Dirancang dengan menggunakan bahasa pemrograman Java dan juga MySql sebagai penyimpanan database. 
 
 “GetTick” adalah inovasi berupa sistem di bidang industri hiburan, industri hiburan yang dimaksud dalam hal ini adalah konser. Dibangun dengan tujuan menjadi wadah perantara bagi pembeli dan penyedia konser dalam proses pemesanan dan pembelian tiket konser musik online secara efektif, efisien, aman, aman, legal, dan terpercaya, sehingga dapat meminimalisir adanya calo.
